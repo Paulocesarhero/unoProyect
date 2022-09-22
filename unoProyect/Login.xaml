@@ -1,0 +1,46 @@
+﻿<Page x:Class="unoProyect.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:unoProyect"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Login">
+    <Page.Resources>
+        <local:unodbDataSet x:Key="unodbDataSet"/>
+        <CollectionViewSource x:Key="playerSetViewSource" Source="{Binding playerSet, Source={StaticResource unodbDataSet}}"/>
+        <CollectionViewSource x:Key="playerSetcredentialsSetViewSource" Source="{Binding FK_credentialsplayer, Source={StaticResource playerSetViewSource}}"/>
+    </Page.Resources>
+
+    <Grid Background="White">
+        <Label Content="UNO" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="btnLogin" Content="Log In" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Width="56" Click="btnLogin_Click"/>
+        <Button Content="Forgot my password" HorizontalAlignment="Left" Margin="302,319,0,0" VerticalAlignment="Top"/>
+        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="437,319,0,0" VerticalAlignment="Top"/>
+        <Button Content="As guest" HorizontalAlignment="Left" Margin="400,379,0,0" VerticalAlignment="Top"/>
+        <Grid x:Name="grid1" DataContext="{StaticResource playerSetcredentialsSetViewSource}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="451,192,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Content="password:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="passwordTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="0" Text="{Binding password, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
+        <Grid x:Name="grid2" DataContext="{StaticResource playerSetcredentialsSetViewSource}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,165,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Content="username:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="usernameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="0" Text="{Binding username, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+        </Grid>
+
+    </Grid>
+</Page>
