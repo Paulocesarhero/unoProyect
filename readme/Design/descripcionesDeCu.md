@@ -19,3 +19,6 @@
 | Postcondiciones | POST-1 Tiene que existir mas de un jugador en la sala de espera para poder jugar la partida                                                                                                                                                                                                                               |
 | Incluye         | Ninguno                                                                                                                                                                                                                                                                                                                   |
 | Extiende        | CU-05 Crear partida   
+## GUI-sala de espera anfitrión
+
+![GUI-sala de espera anfitrión](Prototypes/GUI-sala de espera anfitrión.png)
