@@ -14,7 +14,7 @@
     </Page.Resources>
 
     <Grid Background="White">
-        <Label Content="UNO" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="tlUno" Content="UNO" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
         <Button x:Name="btnLogin" Content="Log In" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Width="56" Click="btnLogin_Click"/>
         <Button Content="Forgot my password" HorizontalAlignment="Left" Margin="302,319,0,0" VerticalAlignment="Top"/>
         <Button Content="Sign Up" HorizontalAlignment="Left" Margin="437,319,0,0" VerticalAlignment="Top"/>

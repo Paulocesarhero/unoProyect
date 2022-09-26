@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -20,6 +21,7 @@ namespace unoProyect
     /// </summary>
     public partial class Login : Page
     {
+        Logic.Login _login = new Logic.Login();
         public Login()
         {
             InitializeComponent();
@@ -28,7 +30,8 @@ namespace unoProyect
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            _login.logUserIn("Paulo","lolopol");
+            tlUno.Content = "Hello";
         }
     }
 }
