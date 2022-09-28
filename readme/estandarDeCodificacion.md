@@ -68,3 +68,22 @@ Tiene que existir un espacio entre cada igual
 ```csharp
 flag=true;
 ```
+### Nombrado de nombre de etiquetas (Prefijos)
+**labels**
+#### Bien
+```xaml
+<Label x:Name="lblUno/>
+```
+#### Mal
+```xaml
+<Label x:Name="tlUno/>
+```
+**buttons**
+#### Bien
+```xaml
+<Label x:Name="lblUno/>
+```
+#### Mal
+```xaml
+<Label x:Name="tlUno/>
+```

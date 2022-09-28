@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/20/2022 14:03:15
+-- Date Created: 09/25/2022 19:02:35
 -- Generated from EDMX file: C:\Users\paulo\source\repos\unoProyect\UnoEntitys\unoDbModel.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,29 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_credentialsplayer]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[credentialsSet] DROP CONSTRAINT [FK_credentialsplayer];
+GO
+IF OBJECT_ID(N'[dbo].[FK_imagesplayer]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[imagesSet] DROP CONSTRAINT [FK_imagesplayer];
+GO
+IF OBJECT_ID(N'[dbo].[FK_friends]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[playerSet] DROP CONSTRAINT [FK_friends];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[playerSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[playerSet];
+GO
+IF OBJECT_ID(N'[dbo].[credentialsSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[credentialsSet];
+GO
+IF OBJECT_ID(N'[dbo].[imagesSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[imagesSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
