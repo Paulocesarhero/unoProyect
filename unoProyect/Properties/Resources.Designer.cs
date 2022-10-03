@@ -21,21 +21,21 @@ namespace unoProyect.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        public Resources() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("unoProyect.Properties.Resources", typeof(Resources).Assembly);
@@ -50,7 +50,7 @@ namespace unoProyect.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -62,7 +62,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string changePassword {
+        public static string changePassword {
             get {
                 return ResourceManager.GetString("changePassword", resourceCulture);
             }
@@ -71,7 +71,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string chat {
+        public static string chat {
             get {
                 return ResourceManager.GetString("chat", resourceCulture);
             }
@@ -80,7 +80,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string email {
+        public static string email {
             get {
                 return ResourceManager.GetString("email", resourceCulture);
             }
@@ -89,7 +89,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string enter {
+        public static string enter {
             get {
                 return ResourceManager.GetString("enter", resourceCulture);
             }
@@ -98,7 +98,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string exit {
+        public static string exit {
             get {
                 return ResourceManager.GetString("exit", resourceCulture);
             }
@@ -107,7 +107,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionChangePasswordCode {
+        public static string instructionChangePasswordCode {
             get {
                 return ResourceManager.GetString("instructionChangePasswordCode", resourceCulture);
             }
@@ -116,7 +116,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionCheckSpam {
+        public static string instructionCheckSpam {
             get {
                 return ResourceManager.GetString("instructionCheckSpam", resourceCulture);
             }
@@ -125,7 +125,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionEnterConfirmCode {
+        public static string instructionEnterConfirmCode {
             get {
                 return ResourceManager.GetString("instructionEnterConfirmCode", resourceCulture);
             }
@@ -134,7 +134,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionEnterInvitationCode {
+        public static string instructionEnterInvitationCode {
             get {
                 return ResourceManager.GetString("instructionEnterInvitationCode", resourceCulture);
             }
@@ -143,7 +143,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionEnterNewPassword {
+        public static string instructionEnterNewPassword {
             get {
                 return ResourceManager.GetString("instructionEnterNewPassword", resourceCulture);
             }
@@ -152,7 +152,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionEnterUsername {
+        public static string instructionEnterUsername {
             get {
                 return ResourceManager.GetString("instructionEnterUsername", resourceCulture);
             }
@@ -161,7 +161,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionExitGame {
+        public static string instructionExitGame {
             get {
                 return ResourceManager.GetString("instructionExitGame", resourceCulture);
             }
@@ -170,7 +170,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionRepeatPassword {
+        public static string instructionRepeatPassword {
             get {
                 return ResourceManager.GetString("instructionRepeatPassword", resourceCulture);
             }
@@ -179,7 +179,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionSendCodeByEmail {
+        public static string instructionSendCodeByEmail {
             get {
                 return ResourceManager.GetString("instructionSendCodeByEmail", resourceCulture);
             }
@@ -188,7 +188,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string instructionSendConfirmCode {
+        public static string instructionSendConfirmCode {
             get {
                 return ResourceManager.GetString("instructionSendConfirmCode", resourceCulture);
             }
@@ -197,7 +197,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string lobby {
+        public static string lobby {
             get {
                 return ResourceManager.GetString("lobby", resourceCulture);
             }
@@ -206,7 +206,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string login {
+        public static string login {
             get {
                 return ResourceManager.GetString("login", resourceCulture);
             }
@@ -215,7 +215,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string newGame {
+        public static string newGame {
             get {
                 return ResourceManager.GetString("newGame", resourceCulture);
             }
@@ -224,7 +224,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string no {
+        public static string no {
             get {
                 return ResourceManager.GetString("no", resourceCulture);
             }
@@ -233,7 +233,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string ok {
+        public static string ok {
             get {
                 return ResourceManager.GetString("ok", resourceCulture);
             }
@@ -242,7 +242,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to en-Us.
         /// </summary>
-        internal static string password {
+        public static string password {
             get {
                 return ResourceManager.GetString("password", resourceCulture);
             }
@@ -251,7 +251,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string playAsGuest {
+        public static string playAsGuest {
             get {
                 return ResourceManager.GetString("playAsGuest", resourceCulture);
             }
@@ -260,7 +260,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string players {
+        public static string players {
             get {
                 return ResourceManager.GetString("players", resourceCulture);
             }
@@ -269,7 +269,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string playWithFriends {
+        public static string playWithFriends {
             get {
                 return ResourceManager.GetString("playWithFriends", resourceCulture);
             }
@@ -278,7 +278,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string requestNewCode {
+        public static string requestNewCode {
             get {
                 return ResourceManager.GetString("requestNewCode", resourceCulture);
             }
@@ -287,7 +287,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string sendCode {
+        public static string sendCode {
             get {
                 return ResourceManager.GetString("sendCode", resourceCulture);
             }
@@ -296,7 +296,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string settingsProfile {
+        public static string settingsProfile {
             get {
                 return ResourceManager.GetString("settingsProfile", resourceCulture);
             }
@@ -305,7 +305,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string signUp {
+        public static string signUp {
             get {
                 return ResourceManager.GetString("signUp", resourceCulture);
             }
@@ -314,7 +314,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string start {
+        public static string start {
             get {
                 return ResourceManager.GetString("start", resourceCulture);
             }
@@ -323,7 +323,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string theGameCodeIs {
+        public static string theGameCodeIs {
             get {
                 return ResourceManager.GetString("theGameCodeIs", resourceCulture);
             }
@@ -332,7 +332,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to en-US.
         /// </summary>
-        internal static string user {
+        public static string user {
             get {
                 return ResourceManager.GetString("user", resourceCulture);
             }
@@ -341,7 +341,7 @@ namespace unoProyect.Properties {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string yes {
+        public static string yes {
             get {
                 return ResourceManager.GetString("yes", resourceCulture);
             }

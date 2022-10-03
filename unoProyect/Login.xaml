@@ -3,44 +3,41 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:p="clr-namespace:unoProyect.Properties"
       xmlns:local="clr-namespace:unoProyect"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Login">
-    <Page.Resources>
-        <local:unodbDataSet x:Key="unodbDataSet"/>
-        <CollectionViewSource x:Key="playerSetViewSource" Source="{Binding playerSet, Source={StaticResource unodbDataSet}}"/>
-        <CollectionViewSource x:Key="playerSetcredentialsSetViewSource" Source="{Binding FK_credentialsplayer, Source={StaticResource playerSetViewSource}}"/>
-    </Page.Resources>
-
     <Grid Background="White">
-        <Label x:Name="tlUno" Content="UNO" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
-        <Button x:Name="btnLogin" Content="Log In" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Width="56" Click="btnLogin_Click"/>
-        <Button Content="Forgot my password" HorizontalAlignment="Left" Margin="302,319,0,0" VerticalAlignment="Top"/>
-        <Button Content="Sign Up" HorizontalAlignment="Left" Margin="437,319,0,0" VerticalAlignment="Top"/>
-        <Button Content="As guest" HorizontalAlignment="Left" Margin="400,379,0,0" VerticalAlignment="Top"/>
-        <Grid x:Name="grid1" DataContext="{StaticResource playerSetcredentialsSetViewSource}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="451,192,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Grid.Column="0" Content="password:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="passwordTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="0" Text="{Binding password, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
-        </Grid>
-        <Grid x:Name="grid2" DataContext="{StaticResource playerSetcredentialsSetViewSource}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,165,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Label Grid.Column="0" Content="username:" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="usernameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="3" Grid.Row="0" Text="{Binding username, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
-        </Grid>
+        <Label x:Name="lblUno" Grid.Column="1" Grid.Row="1" Content="UNO" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Height="59" Grid.RowSpan="2"/>
+        <Label x:Name="lblUser" Grid.Column="1" Grid.Row="3" Content="{x:Static p:Resources.user}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="12" Margin="262,5,0,0"/>
+        <TextBox x:Name="tbUser" Grid.Column="1" Grid.Row="3" Margin="336,3,254,13" RenderTransformOrigin="0.551,0.152"/>
+        <Label x:Name="lblPassword" Grid.Column="1" Grid.Row="4" Content="{x:Static p:Resources.password}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="245,0,0,0"/>
+        <PasswordBox x:Name="pbPassword" Grid.Column="1"  Grid.Row="4" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="171" Margin="336,0,0,0" Height="28"/>
+        <Button Grid.Column="1" Grid.Row="6"  x:Name="btnLogin" Content="Log In" HorizontalAlignment="Center" VerticalAlignment="Top" Width="56" Click="btnLogin_Click"/>
+        <Button Grid.Column="1" Grid.Row="7" x:Name="btnForgotMyPassword" Content="Forgot my password" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="262,18,0,0"/>
+        <Button Grid.Column="1" Grid.Row="7" x:Name="btnSignUp" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnSignUp_Click" Margin="397,16,0,0" Height="20" Width="48"/>
+        <Button Grid.Column="1" Grid.Row="8" x:Name="btnAsGuest" Content="As guest" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="0,15,0,0"/>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
 
     </Grid>
 </Page>

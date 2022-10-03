@@ -14,9 +14,16 @@ namespace UnoEntitys
     
     public partial class images
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public images()
+        {
+            this.player = new HashSet<player>();
+        }
+    
         public int Id { get; set; }
         public string path { get; set; }
     
-        public virtual player player { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<player> player { get; set; }
     }
 }
