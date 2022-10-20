@@ -46,7 +46,7 @@ namespace unoProyect
                 if(Utilities.ValidatePassword(password) && Utilities.ValidateEmail(email))
                 {
                     password = Utilities.ComputeSHA256Hash(password);
-                    if (!logicSU.addCredentials(username, password, email))
+                    if (logicSU.addCredentials(username, password, email) != 1)
                     {
                         MessageBox.Show(Properties.Resources.error,
                             Properties.Resources.error);

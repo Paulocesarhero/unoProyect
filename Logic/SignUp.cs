@@ -31,9 +31,19 @@ namespace Logic
             }
             return result;
         }
-        public bool addCredentials(string usernameReceived, string passwordReceived, string emailReceived)
+        public int addCredentials(string usernameReceived, string passwordReceived, string emailReceived)
         {
             CredentialsManagerClient client = new CredentialsManagerClient();
+            Credentials credentials = new Credentials
+            {
+                Username = usernameReceived,
+                Password = passwordReceived,
+                Email = emailReceived
+            };
+
+            int result = client.SignUp(credentials);
+            Console.WriteLine("Resultado: ", result);
+            return result;
             
             /*
             credentials _credentials = new credentials
