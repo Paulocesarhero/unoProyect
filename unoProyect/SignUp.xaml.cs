@@ -30,12 +30,13 @@ namespace unoProyect
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            credentials _credentials = new credentials();
+            /*credentials _credentials = new credentials();
             _credentials.password = pbPassword.Password;
             _credentials.username = tbUser.Text;
             _credentials.email = tbEmail.Text;
              var result = logicSU.addCredentials(_credentials);
-            Console.WriteLine(result);
+            Console.WriteLine(result);*/
+            var result = logicSU.addFriends(1,3);
         }
     }
 }

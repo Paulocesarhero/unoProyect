@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 10/02/2022 21:46:58
+-- Date Created: 10/03/2022 08:36:20
 -- Generated from EDMX file: C:\Users\paulo\source\repos\unoProyect\UnoEntitys\unoDbModel.edmx
 -- --------------------------------------------------
 

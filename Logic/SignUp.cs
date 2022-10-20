@@ -41,6 +41,32 @@ namespace Logic
                     player _player = new player { wins = 0, losts = 0, images = _images };
                     _credentials.player = _player;
                     _context.credentialsSet.Add(_credentials);
+
+                    _context.SaveChanges();
+                    result = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return result;
+        }
+        public bool addFriends(int idplayer1, int idplayer2)
+        {
+            bool result = false;
+            try
+            {
+                using (unoDbModelContainer _context = new unoDbModelContainer())
+                {
+
+                    player _player1 = _context.playerSet.FirstOrDefault(s => s.IdPlayer == idplayer1);
+                    player _player2 = _context.playerSet.FirstOrDefault(s => s.IdPlayer == idplayer2);
+
+                    
+
+                    _player1.friends.Add(_player2);
+                    _context.playerSet.Add(_player1);
                     _context.SaveChanges();
                     result = true;
                 }

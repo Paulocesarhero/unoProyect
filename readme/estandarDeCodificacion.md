@@ -152,4 +152,4 @@ Los metodos deben de ser tipo publico y no internal
                 return ResourceManager.GetString("chat", resourceCulture);
             }
         }
-```
+```x
