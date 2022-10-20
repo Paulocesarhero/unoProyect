@@ -33,6 +33,7 @@ namespace Logic
         }
         public int addCredentials(string usernameReceived, string passwordReceived, string emailReceived)
         {
+            /*
             CredentialsManagerClient client = new CredentialsManagerClient();
             Credentials credentials = new Credentials
             {
@@ -44,15 +45,15 @@ namespace Logic
             int result = client.SignUp(credentials);
             Console.WriteLine("Resultado: ", result);
             return result;
+            */
             
-            /*
             credentials _credentials = new credentials
             {
                 username = usernameReceived,
                 password = passwordReceived,
                 email = emailReceived
             };
-            bool result = false;
+            int result = 0;
             try
             {
                 using (unoDbModelContainer _context = new unoDbModelContainer())
@@ -68,11 +69,11 @@ namespace Logic
                     {
                         _context.credentialsSet.Add(_credentials);
                         _context.SaveChanges();
-                        result = true;
+                        result = 1;
                     }
                     else
                     {
-                        result = false;
+                        result = 2;
                     }
                     
                 }
@@ -81,8 +82,9 @@ namespace Logic
             {
                 throw new Exception(ex.Message);
             }
+            Console.WriteLine("Resultado: ", result);
             return result;
-            */
+            
         }
         public bool ItsAUser(string usernameReceived, string passwordReceived)
         {
