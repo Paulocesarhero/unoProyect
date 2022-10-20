@@ -129,6 +129,9 @@
   <data name="enter" xml:space="preserve">
     <value>Enter</value>
   </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="exit" xml:space="preserve">
     <value>Exit</value>
   </data>
@@ -218,6 +221,12 @@
   </data>
   <data name="user" xml:space="preserve">
     <value>Username</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="wrongCredentials" xml:space="preserve">
+    <value>Wrong credentials</value>
   </data>
   <data name="yes" xml:space="preserve">
     <value>Yes</value>

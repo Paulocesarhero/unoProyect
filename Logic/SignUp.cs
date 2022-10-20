@@ -51,8 +51,14 @@ namespace Logic
             }
             return result;
         }
-        public bool itsAUser(credentials _credentials)
+        public bool ItsAUser(string usernameReceived, string passwordReceived)
         {
+            //se tiene que conectar con el servidor
+            credentials _credentials = new credentials
+            {
+                username = usernameReceived,
+                password = passwordReceived
+            };
             bool result = false;
             try
             {
