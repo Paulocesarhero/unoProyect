@@ -17,17 +17,16 @@ namespace UnoEntitys
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public player()
         {
-            this.player1 = new HashSet<player>();
+            this.friends = new HashSet<player>();
         }
     
         public int IdPlayer { get; set; }
-        public string wins { get; set; }
-        public string losts { get; set; }
+        public int wins { get; set; }
+        public long losts { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<player> friends { get; set; }
         public virtual credentials credentials { get; set; }
         public virtual images images { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<player> player1 { get; set; }
-        public virtual player player2 { get; set; }
     }
 }

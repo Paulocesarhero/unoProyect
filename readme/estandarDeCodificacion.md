@@ -22,11 +22,19 @@ public string getFisrtName()
 }
 ```
 ### Metodos
-Todos los metodos se escriben en UpperCammelCase
+Todos los metodos (publicos) se escriben en UpperCammelCase
 ```csharp
 public async SendMessage(string user, string message)
 {
     await Clients.All.SendAsync("ReceiveMessage", user, message);
+}
+```
+### Nombrado de acciones
+**acción clic**
+Es el nombre del controlador seguido de _Click
+```csharp
+private void btnSignUp_Click(object sender, RoutedEventArgs e)
+{
 }
 ```
 ## Estilo
@@ -63,7 +71,9 @@ public CustomerDto ToDto() {
 ### Espaciados
 Tiene que existir un espacio entre cada igual
 #### Bien
-```flag = true;```
+```
+flag = true;
+```
 #### Mal
 ```csharp
 flag=true;
@@ -81,9 +91,65 @@ flag=true;
 **buttons**
 #### Bien
 ```xaml
-<Label x:Name="lblUno/>
+<button x:Name="btnUno/>
 ```
 #### Mal
 ```xaml
-<Label x:Name="tlUno/>
+<button x:Name="botonUno"/>
+```
+**TextBox**
+#### Bien
+```xaml
+<TextBox x:Name="tbUno"/>
+```
+#### Mal
+```xaml
+<TextBox x:Name="textBoxUno"/>
+```
+**passwordBox**
+#### Bien
+```xaml
+<PasswordBox  x:Name="pbUno"/>
+```
+#### Mal
+```xaml
+<PasswordBox  x:Name="passwordtextBoxUno"/>
+```
+## Internacionalizacion
+El xmnls debera de hacer referencia a la palabra p de propiertes
+### Xmnls
+#### bien
+```xml
+xmlns:p="clr-namespace:unoProyect.Properties"
+```
+#### Mal
+```xml
+xmlns:internacionalizacion="clr-namespace:unoProyect.Properties"
+```
+### Labels content
+#### bien
+```xaml
+<Label x:Name = "lblName" Content = "{x:Static p:Resources.Name}"/>
+```
+#### mal
+```xaml
+<Label x:Name = "lblName" Content = "Nombre"/>
+```
+### Metodos de localizacion
+Los metodos deben de ser tipo publico y no internal
+#### bien
+```csharp
+        public static string chat {
+            get {
+                return ResourceManager.GetString("chat", resourceCulture);
+            }
+        }
+```
+#### mal
+```csharp
+        internal static string chat {
+            get {
+                return ResourceManager.GetString("chat", resourceCulture);
+            }
+        }
 ```

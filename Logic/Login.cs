@@ -9,10 +9,10 @@ namespace Logic
 {
     public class Login
     {
-        private unoDbModelContainer _context;
+        //private unoDbModelContainer _context;
         public void logUserIn(string username, string password)
         {
-            using (var _context = new unoDbModelContainer())
+            /*using (var _context = new unoDbModelContainer())
             {
                 var credentialsWithUsername = from credentials in _context.credentialsSet
                     select credentials.player;
@@ -25,7 +25,7 @@ namespace Logic
                 Console.WriteLine(credentialsWithUsername);
             }
             Console.WriteLine("Hola mundo logico");
-            
+            */
         }
          
     }

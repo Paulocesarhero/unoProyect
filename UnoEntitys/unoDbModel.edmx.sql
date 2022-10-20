@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/25/2022 19:02:35
+-- Date Created: 10/02/2022 21:46:58
 -- Generated from EDMX file: C:\Users\paulo\source\repos\unoProyect\UnoEntitys\unoDbModel.edmx
 -- --------------------------------------------------
 
@@ -17,14 +17,17 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_friendsList_player]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[friendsList] DROP CONSTRAINT [FK_friendsList_player];
+GO
+IF OBJECT_ID(N'[dbo].[FK_friendsList_player1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[friendsList] DROP CONSTRAINT [FK_friendsList_player1];
+GO
 IF OBJECT_ID(N'[dbo].[FK_credentialsplayer]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[credentialsSet] DROP CONSTRAINT [FK_credentialsplayer];
 GO
 IF OBJECT_ID(N'[dbo].[FK_imagesplayer]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[imagesSet] DROP CONSTRAINT [FK_imagesplayer];
-GO
-IF OBJECT_ID(N'[dbo].[FK_friends]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[playerSet] DROP CONSTRAINT [FK_friends];
+    ALTER TABLE [dbo].[playerSet] DROP CONSTRAINT [FK_imagesplayer];
 GO
 
 -- --------------------------------------------------
@@ -40,6 +43,9 @@ GO
 IF OBJECT_ID(N'[dbo].[imagesSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[imagesSet];
 GO
+IF OBJECT_ID(N'[dbo].[friendsList]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[friendsList];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -48,9 +54,9 @@ GO
 -- Creating table 'playerSet'
 CREATE TABLE [dbo].[playerSet] (
     [IdPlayer] int IDENTITY(1,1) NOT NULL,
-    [wins] nvarchar(max)  NOT NULL,
-    [losts] nvarchar(max)  NOT NULL,
-    [player2_IdPlayer] int  NOT NULL
+    [wins] int  NOT NULL,
+    [losts] bigint  NOT NULL,
+    [images_Id] int  NOT NULL
 );
 GO
 
@@ -67,8 +73,14 @@ GO
 -- Creating table 'imagesSet'
 CREATE TABLE [dbo].[imagesSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [path] nvarchar(max)  NOT NULL,
-    [player_IdPlayer] int  NOT NULL
+    [path] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'friendsList'
+CREATE TABLE [dbo].[friendsList] (
+    [friends_IdPlayer] int  NOT NULL,
+    [friendsList_player_IdPlayer] int  NOT NULL
 );
 GO
 
@@ -94,9 +106,39 @@ ADD CONSTRAINT [PK_imagesSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
+-- Creating primary key on [friends_IdPlayer], [friendsList_player_IdPlayer] in table 'friendsList'
+ALTER TABLE [dbo].[friendsList]
+ADD CONSTRAINT [PK_friendsList]
+    PRIMARY KEY CLUSTERED ([friends_IdPlayer], [friendsList_player_IdPlayer] ASC);
+GO
+
 -- --------------------------------------------------
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
+
+-- Creating foreign key on [friends_IdPlayer] in table 'friendsList'
+ALTER TABLE [dbo].[friendsList]
+ADD CONSTRAINT [FK_friendsList_player]
+    FOREIGN KEY ([friends_IdPlayer])
+    REFERENCES [dbo].[playerSet]
+        ([IdPlayer])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [friendsList_player_IdPlayer] in table 'friendsList'
+ALTER TABLE [dbo].[friendsList]
+ADD CONSTRAINT [FK_friendsList_player1]
+    FOREIGN KEY ([friendsList_player_IdPlayer])
+    REFERENCES [dbo].[playerSet]
+        ([IdPlayer])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_friendsList_player1'
+CREATE INDEX [IX_FK_friendsList_player1]
+ON [dbo].[friendsList]
+    ([friendsList_player_IdPlayer]);
+GO
 
 -- Creating foreign key on [player_IdPlayer] in table 'credentialsSet'
 ALTER TABLE [dbo].[credentialsSet]
@@ -113,34 +155,19 @@ ON [dbo].[credentialsSet]
     ([player_IdPlayer]);
 GO
 
--- Creating foreign key on [player_IdPlayer] in table 'imagesSet'
-ALTER TABLE [dbo].[imagesSet]
+-- Creating foreign key on [images_Id] in table 'playerSet'
+ALTER TABLE [dbo].[playerSet]
 ADD CONSTRAINT [FK_imagesplayer]
-    FOREIGN KEY ([player_IdPlayer])
-    REFERENCES [dbo].[playerSet]
-        ([IdPlayer])
+    FOREIGN KEY ([images_Id])
+    REFERENCES [dbo].[imagesSet]
+        ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_imagesplayer'
 CREATE INDEX [IX_FK_imagesplayer]
-ON [dbo].[imagesSet]
-    ([player_IdPlayer]);
-GO
-
--- Creating foreign key on [player2_IdPlayer] in table 'playerSet'
-ALTER TABLE [dbo].[playerSet]
-ADD CONSTRAINT [FK_friends]
-    FOREIGN KEY ([player2_IdPlayer])
-    REFERENCES [dbo].[playerSet]
-        ([IdPlayer])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_friends'
-CREATE INDEX [IX_FK_friends]
 ON [dbo].[playerSet]
-    ([player2_IdPlayer]);
+    ([images_Id]);
 GO
 
 -- --------------------------------------------------
