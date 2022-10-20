@@ -56,9 +56,9 @@
     <Compile Include="SignUp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UnoEntitys\UnoEntitys.csproj">
+    <ProjectReference Include="..\UnoEntitys\DataAccess.csproj">
       <Project>{31c6b324-f8c9-4878-b552-58e19d82863d}</Project>
-      <Name>UnoEntitys</Name>
+      <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
