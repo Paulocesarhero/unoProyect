@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UnoEntitys;
+using unoProyect.Security;
 
 namespace unoProyect
 {
@@ -30,12 +31,36 @@ namespace unoProyect
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            credentials _credentials = new credentials();
-            _credentials.password = pbPassword.Password;
-            _credentials.username = tbUser.Text;
-            _credentials.email = tbEmail.Text;
-             var result = logicSU.addCredentials(_credentials);
-            Console.WriteLine(result);
+            var username = tbUser.Text;
+            var password = pbPassword.Password.ToString();
+            var email = tbEmail.Text;
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) ||
+                string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show(Properties.Resources.notEmptyFields,
+                            Properties.Resources.error);
+            }
+            else
+            {
+                
+                if(Utilities.ValidatePassword(password) && Utilities.ValidateEmail(email))
+                {
+                    password = Utilities.ComputeSHA256Hash(password);
+                    if (!logicSU.addCredentials(username, password, email))
+                    {
+                        MessageBox.Show(Properties.Resources.error,
+                            Properties.Resources.error);
+                    }
+                    else
+                    {
+                        //abrir ventana para ingresar código de email
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña o email inválidos", "");
+                }
+            }
         }
     }
 }

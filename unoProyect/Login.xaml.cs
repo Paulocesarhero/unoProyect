@@ -53,7 +53,6 @@ namespace unoProyect
                     MessageBox.Show(Properties.Resources.welcome + " " + username,
                         "");
                 }
-                Console.WriteLine("Este es el resultado: " + result);
             }
         }
 

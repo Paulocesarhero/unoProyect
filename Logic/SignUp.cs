@@ -29,8 +29,14 @@ namespace Logic
             }
             return result;
         }
-        public bool addCredentials(credentials _credentials)
+        public bool addCredentials(string usernameReceived, string passwordReceived, string emailReceived)
         {
+            credentials _credentials = new credentials
+            {
+                username = usernameReceived,
+                password = passwordReceived,
+                email = emailReceived
+            };
             bool result = false;
             try
             {
@@ -40,9 +46,20 @@ namespace Logic
                     _context.imagesSet.Attach(_images);
                     player _player = new player { wins = 0, losts = 0, images = _images };
                     _credentials.player = _player;
-                    _context.credentialsSet.Add(_credentials);
-                    _context.SaveChanges();
-                    result = true;
+
+                    var query = from credent in _context.credentialsSet
+                                where credent.username == _credentials.username select credent.username;
+                    if (query.Count() == 0)
+                    {
+                        _context.credentialsSet.Add(_credentials);
+                        _context.SaveChanges();
+                        result = true;
+                    }
+                    else
+                    {
+                        result = false;
+                    }
+                    
                 }
             }
             catch (Exception ex)
