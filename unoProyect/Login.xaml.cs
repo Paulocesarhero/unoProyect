@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UnoEntitys;
+using unoProyect.Security;
 
 namespace unoProyect
 {
@@ -31,14 +32,28 @@ namespace unoProyect
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            credentials _credentials = new credentials
+            var username = tbUser.Text;
+            var password = pbPassword.Password.ToString();
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                username = tbUser.Text,
-                password = pbPassword.Password
-            };
-            var result = logicSU.itsAUser(_credentials);
-            Console.WriteLine("Este es el resultado: " + result);
-
+                MessageBox.Show(Properties.Resources.notEmptyFields,
+                            Properties.Resources.error);
+            }
+            else
+            {
+                password = Utilities.ComputeSHA256Hash(password);
+                var result = logicSU.ItsAUser(username, password);
+                if (!logicSU.ItsAUser(username, password))
+                {
+                    MessageBox.Show(Properties.Resources.wrongCredentials, 
+                        Properties.Resources.error);    
+                }
+                else
+                {
+                    MessageBox.Show(Properties.Resources.welcome + " " + username,
+                        "");
+                }
+            }
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)

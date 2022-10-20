@@ -118,117 +118,117 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="changePassword" xml:space="preserve">
-    <value>Change password</value>
+    <value>Cambiar contraseña</value>
   </data>
   <data name="chat" xml:space="preserve">
     <value>Chat</value>
   </data>
   <data name="email" xml:space="preserve">
-    <value>Email</value>
+    <value>Correo electrónico</value>
   </data>
   <data name="enter" xml:space="preserve">
-    <value>Enter</value>
+    <value>Entrar</value>
   </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>
   <data name="exit" xml:space="preserve">
-    <value>Exit</value>
+    <value>Salir</value>
   </data>
   <data name="forgetMyPassword" xml:space="preserve">
-    <value>Forget my password</value>
+    <value>Olvidé mi contraseña</value>
   </data>
   <data name="game" xml:space="preserve">
     <value>UNO</value>
   </data>
   <data name="instructionChangePasswordCode" xml:space="preserve">
-    <value>We'll send you a code by email to change your password</value>
+    <value>Te enviaremos un código a tu correo electrónico para cambiar tu contraseña</value>
   </data>
   <data name="instructionCheckSpam" xml:space="preserve">
-    <value>Can't see the code? Check your spam</value>
+    <value>¿No ves el código? Revisa tu carpeta de correos no deseados</value>
   </data>
   <data name="instructionEnterConfirmCode" xml:space="preserve">
-    <value>Enter confirm code:</value>
+    <value>Ingrese el código:</value>
   </data>
   <data name="instructionEnterInvitationCode" xml:space="preserve">
-    <value>Enter Invitation Code</value>
+    <value>Insertar código de invitación</value>
   </data>
   <data name="instructionEnterNewPassword" xml:space="preserve">
-    <value>Enter new password</value>
+    <value>Ingresa nueva contraseña</value>
   </data>
   <data name="instructionEnterUsername" xml:space="preserve">
-    <value>Enter username</value>
+    <value>Ingresar nombre de usuario</value>
   </data>
   <data name="instructionExitGame" xml:space="preserve">
-    <value>Are you sure you want to exit?</value>
+    <value>¿Estás seguro que quieres abandonar la partida?</value>
   </data>
   <data name="instructionRepeatPassword" xml:space="preserve">
-    <value>Repeat your new password</value>
+    <value>Repite la nueva contraseña</value>
   </data>
   <data name="instructionSendCodeByEmail" xml:space="preserve">
-    <value>Send code by email</value>
+    <value>Enviar código por correo electrónico</value>
   </data>
   <data name="instructionSendConfirmCode" xml:space="preserve">
-    <value>We'll send you a code by email to confirm your account</value>
+    <value>Te enviaremos un código a tu correo electrónico para confirmar el registro</value>
   </data>
   <data name="lobby" xml:space="preserve">
-    <value>Lobby</value>
+    <value>Sala de espera</value>
   </data>
   <data name="login" xml:space="preserve">
-    <value>Log In</value>
+    <value>Iniciar sesión</value>
   </data>
   <data name="newGame" xml:space="preserve">
-    <value>New game</value>
+    <value>Crear partida</value>
   </data>
   <data name="no" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="notEmptyFields" xml:space="preserve">
-    <value>Can't leave empty fields</value>
+    <value>No se pueden dejar campos vacíos</value>
   </data>
   <data name="ok" xml:space="preserve">
-    <value>Ok</value>
+    <value>Aceptar</value>
   </data>
   <data name="password" xml:space="preserve">
-    <value>Password</value>
+    <value>Contraseña</value>
   </data>
   <data name="playAsGuest" xml:space="preserve">
-    <value>Play as guest</value>
+    <value>Jugar como invitado</value>
   </data>
   <data name="players" xml:space="preserve">
-    <value>Players</value>
+    <value>Jugadores</value>
   </data>
   <data name="playWithFriends" xml:space="preserve">
-    <value>Play with friends</value>
+    <value>Invitar amigos</value>
   </data>
   <data name="requestNewCode" xml:space="preserve">
-    <value>Request new code</value>
+    <value>Solicitar nuevo código</value>
   </data>
   <data name="sendCode" xml:space="preserve">
-    <value>Send code</value>
+    <value>Enviar código de invitación</value>
   </data>
   <data name="settingsProfile" xml:space="preserve">
-    <value>Settings profile</value>
+    <value>Personalizar perfil</value>
   </data>
   <data name="signUp" xml:space="preserve">
-    <value>Sign Up</value>
+    <value>Registrarse</value>
   </data>
   <data name="start" xml:space="preserve">
-    <value>Start</value>
+    <value>Iniciar partida</value>
   </data>
   <data name="theGameCodeIs" xml:space="preserve">
-    <value>The game code is: </value>
+    <value>El código de la partida es:</value>
   </data>
   <data name="user" xml:space="preserve">
-    <value>Username</value>
+    <value>Usuario</value>
   </data>
   <data name="welcome" xml:space="preserve">
-    <value>Welcome</value>
+    <value>Bienvenido</value>
   </data>
   <data name="wrongCredentials" xml:space="preserve">
-    <value>Wrong credentials</value>
+    <value>Credenciales incorrectas</value>
   </data>
   <data name="yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Sí</value>
   </data>
 </root>

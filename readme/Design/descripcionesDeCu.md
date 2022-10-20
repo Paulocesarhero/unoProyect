@@ -20,5 +20,4 @@
 | Incluye         | Ninguno                                                                                                                                                                                                                                                                                                                   |
 | Extiende        | CU-05 Crear partida   
 ## GUI-sala de espera anfitrión
-
-![GUI-sala de espera anfitrión](Prototypes/GUI-sala de espera anfitrión.png)
+![GUI-sala de espera anfitrión](https://user-images.githubusercontent.com/56269540/191651105-d8e246af-136c-48ff-b58e-336b9a317cc0.png)

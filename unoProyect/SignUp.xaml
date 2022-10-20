@@ -10,6 +10,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:p="clr-namespace:unoProyect.Properties"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
 
     <Grid Background="White">
         <Grid.RowDefinitions>
@@ -22,7 +23,7 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <Label
-            Content="Registrarse"
+            Content="{x:Static p:Resources.signUp}"
             FontSize="30"
             FontWeight="Bold"
             HorizontalAlignment="Center"
@@ -31,7 +32,7 @@
             VerticalAlignment="Top"
             x:Name="lblSignUp" />
         <Label
-            Content="Usuario"
+            Content="{x:Static p:Resources.user}"
             Grid.Row="0"
             Height="41"
             HorizontalAlignment="Left"
@@ -49,7 +50,7 @@
             Width="100"
             x:Name="tbUser" />
         <Label
-            Content="Email"
+            Content="{x:Static p:Resources.email}"
             Grid.RowSpan="2"
             Height="41"
             HorizontalAlignment="Left"
@@ -66,13 +67,13 @@
             Width="100"
             x:Name="tbEmail" Grid.RowSpan="2" />
         <Label
-            Content="te enviaremos un código a tu correo electronico&#xD;&#xA;"
+            Content="{x:Static p:Resources.instructionSendConfirmCode}"
             Grid.Row="2"
             HorizontalAlignment="Left"
             Margin="187,47,0,0"
             VerticalAlignment="Top" Grid.ColumnSpan="2" />
         <Button
-            Content="Registrar"
+            Content="{x:Static p:Resources.signUp}"
             Grid.Row="2"
             HorizontalAlignment="Left"
             Margin="296,105,0,0"

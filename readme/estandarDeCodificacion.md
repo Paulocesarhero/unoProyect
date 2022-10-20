@@ -22,7 +22,7 @@ public string getFisrtName()
 }
 ```
 ### Metodos
-Todos los metodos (publicos) se escriben en UpperCammelCase
+Todos los metodos se escriben en UpperCammelCase
 ```csharp
 public async SendMessage(string user, string message)
 {
@@ -82,11 +82,11 @@ flag=true;
 **labels**
 #### Bien
 ```xaml
-<Label x:Name="lblUno/>
+<Label x:Name="lblUno"/>
 ```
 #### Mal
 ```xaml
-<Label x:Name="tlUno/>
+<Label x:Name="tlUno"/>
 ```
 **buttons**
 #### Bien
@@ -152,4 +152,4 @@ Los metodos deben de ser tipo publico y no internal
                 return ResourceManager.GetString("chat", resourceCulture);
             }
         }
-```x
+```

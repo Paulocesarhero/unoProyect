@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoEntitys", "UnoEntitys\Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{BAD93597-B03D-4AE5-A5EA-BBF5639200EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unoProyectServidor", "unoProyectServidor\unoProyectServidor.csproj", "{59F9C2C0-9580-4513-8337-A8ECEBFA5D14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{228E7559-861E-4F3D-AF21-7336C2683F08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{BAD93597-B03D-4AE5-A5EA-BBF5639200EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAD93597-B03D-4AE5-A5EA-BBF5639200EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAD93597-B03D-4AE5-A5EA-BBF5639200EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F9C2C0-9580-4513-8337-A8ECEBFA5D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F9C2C0-9580-4513-8337-A8ECEBFA5D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F9C2C0-9580-4513-8337-A8ECEBFA5D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F9C2C0-9580-4513-8337-A8ECEBFA5D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228E7559-861E-4F3D-AF21-7336C2683F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228E7559-861E-4F3D-AF21-7336C2683F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228E7559-861E-4F3D-AF21-7336C2683F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228E7559-861E-4F3D-AF21-7336C2683F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
