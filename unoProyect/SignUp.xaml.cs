@@ -54,6 +54,7 @@ namespace unoProyect
                     else
                     {
                         //abrir ventana para ingresar código de email
+                        MessageBox.Show("Registro okei", "");
                     }
                 }
                 else

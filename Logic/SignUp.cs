@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Logic.ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Contexts;
+using System.ServiceModel.Configuration;
 using UnoEntitys;
 
 namespace Logic
@@ -31,6 +33,9 @@ namespace Logic
         }
         public bool addCredentials(string usernameReceived, string passwordReceived, string emailReceived)
         {
+            CredentialsManagerClient client = new CredentialsManagerClient();
+            
+            /*
             credentials _credentials = new credentials
             {
                 username = usernameReceived,
@@ -67,6 +72,7 @@ namespace Logic
                 throw new Exception(ex.Message);
             }
             return result;
+            */
         }
         public bool ItsAUser(string usernameReceived, string passwordReceived)
         {
