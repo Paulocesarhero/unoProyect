@@ -13,17 +13,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using UnoEntitys;
 using unoProyect.Security;
+
 
 namespace unoProyect
 {
     /// <summary>
-    /// Lógica de interacción para SignUp.xaml
+    /// Lógica de interacción para CallDataService.xaml
     /// </summary>
     public partial class SignUp : Page
     {
-        Logic.SignUp logicSU = new Logic.SignUp();
+        Logic.CallDataService logic = new Logic.CallDataService();
         public SignUp()
         {
             InitializeComponent();
@@ -46,16 +46,11 @@ namespace unoProyect
                 if(Utilities.ValidatePassword(password) && Utilities.ValidateEmail(email))
                 {
                     password = Utilities.ComputeSHA256Hash(password);
-                    if (logicSU.addCredentials(username, password, email) != 1)
-                    {
-                        MessageBox.Show(Properties.Resources.error,
-                            Properties.Resources.error);
-                    }
-                    else
-                    {
+                    
+                    logic.AddCredentials(username,password,email);
                         //abrir ventana para ingresar código de email
                         MessageBox.Show("Registro okei", "");
-                    }
+                    
                 }
                 else
                 {
