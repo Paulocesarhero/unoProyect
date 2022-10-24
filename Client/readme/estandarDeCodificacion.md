@@ -7,6 +7,15 @@ Nombrado
 ## Nombrado
 ### Reglas generales
 Todo el código fuente será escrito en el idioma inglés, incluyendo el nombre de métodos, atributos, propiedades.
+Se usan nombres descriptivos y tienen relación con la función que desempeñan (preferencia a nombres largos y descriptivos que cortos y poco entendibles).
+#### Bien
+```csharp
+public bool ValidateEmail(string emailToValidate);
+```
+#### Mal
+```csharp
+public bool validateE(string e);
+```
 Si las propiedades tienen modificadores de acceso públicos, serán escritos en notación UpperCammelCase.
 
 ### Propiedades
